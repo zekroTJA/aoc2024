@@ -30,8 +30,8 @@ function run_day {
         return
     fi
 
-    echo -e "\n${C_GREY}----- Test Input -----${C_RESET}"
     if [ -f "$1/test_input.txt" ] && [ -z "$2" ]; then
+        echo -e "\n${C_GREY}----- Test Input -----${C_RESET}"
         "./target/$TARGET/$1" --test
     fi
 
