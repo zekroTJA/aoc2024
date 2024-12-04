@@ -1,3 +1,9 @@
+/// Takes a string input and transforms it into a matrix by using each
+/// line as row and character in line as column.
+pub fn to_matrix(input: &str) -> Vec<Vec<char>> {
+    input.lines().map(|l| l.chars().collect()).collect()
+}
+
 /// Takes a matrix flips rows to colums and colums to rows.
 ///
 /// Example:
