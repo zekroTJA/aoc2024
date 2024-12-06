@@ -2,7 +2,7 @@ use lib::*;
 
 fn main() {
     let input: String = lib::read_input!();
-    let grid = to_matrix(&input);
+    let grid = to_grid(&input);
 
     let mut count = 0;
 

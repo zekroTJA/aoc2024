@@ -27,6 +27,24 @@ impl Direction {
             Direction::Right => Direction::Left,
         }
     }
+
+    pub fn turn_cw(&self) -> Direction {
+        match self {
+            Direction::Up => Direction::Right,
+            Direction::Down => Direction::Left,
+            Direction::Left => Direction::Up,
+            Direction::Right => Direction::Down,
+        }
+    }
+
+    pub fn turn_ccw(&self) -> Direction {
+        match self {
+            Direction::Up => Direction::Left,
+            Direction::Down => Direction::Right,
+            Direction::Left => Direction::Down,
+            Direction::Right => Direction::Up,
+        }
+    }
 }
 
 impl From<&str> for Direction {
