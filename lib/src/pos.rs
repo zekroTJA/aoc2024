@@ -58,7 +58,7 @@ impl Pos {
     /// # use lib::{Pos, Direction};
     /// let pos = Pos { x: 1, y: 2};
     ///
-    /// assert_eq!(pos.mv(Direction::Down), Pos { x: 1, y: 1 });
+    /// assert_eq!(pos.mv(Direction::Down), Pos { x: 1, y: 3 });
     /// ```
     pub fn mv(self, dir: Direction) -> Self {
         self + dir.into()
