@@ -29,8 +29,12 @@ pub fn find_all<T: PartialEq>(grid: &[Vec<T>], v: &T) -> Vec<Pos> {
     res
 }
 
+pub fn is_in_bounds<T>(grid: &[Vec<T>], pos: Pos) -> bool {
+    !pos.is_any_negative() && pos.y < grid.len() as isize && pos.x < grid[0].len() as isize
+}
+
 pub fn get_at<T>(grid: &[Vec<T>], pos: Pos) -> Option<&T> {
-    if pos.is_any_negative() || pos.y >= grid.len() as isize || pos.x >= grid[0].len() as isize {
+    if !is_in_bounds(grid, pos) {
         None
     } else {
         Some(&grid[pos.y as usize][pos.x as usize])
