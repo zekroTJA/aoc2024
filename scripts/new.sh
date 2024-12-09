@@ -6,7 +6,7 @@ source "$PWD/.env" || { echo "No .env file found in the current directory!"; exi
 
 current_day=$(find . -maxdepth 1 -type d -name "day-*" | sort | tail -1 | cut -c 3-)
 current_day=${current_day/*-}
-next_day="$(( current_day + 1 ))"
+next_day="$(expr $current_day + 1 )"
 next_day_padded=$(printf "%02d" "$next_day")
 
 if [ "$current_day" == "" ]; then
