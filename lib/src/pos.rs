@@ -12,6 +12,7 @@ pub struct Pos {
 impl Pos {
     /// Returns true if either the x or y component of the point is negative.
     ///
+    /// # Example
     /// ```
     /// # use lib::Pos;
     /// let pos1 = Pos { x: 1, y: 1 };
@@ -26,6 +27,7 @@ impl Pos {
 
     /// Returns true if either the x or y component of the point is zero.
     ///
+    /// # Example
     /// ```
     /// # use lib::Pos;
     /// let pos1 = Pos { x: 0, y: 1 };
@@ -41,6 +43,7 @@ impl Pos {
     /// Returns the [manhattan distance](https://en.wikipedia.org/wiki/Taxicab_geometry) from the
     /// current point to Point `to`.
     ///
+    /// # Example
     /// ```
     /// # use lib::Pos;
     /// let pos1 = Pos { x: 1, y: 2};
@@ -54,6 +57,7 @@ impl Pos {
 
     /// "Walks" the point into the given direction by one unit.
     ///
+    /// # Example
     /// ```
     /// # use lib::{Pos, Direction};
     /// let pos = Pos { x: 1, y: 2};
@@ -67,6 +71,7 @@ impl Pos {
     /// Seen the point as a vector from (0, 0), this function returns
     /// the vector turned 90° counter-clockwise.
     ///
+    /// # Example
     /// ```
     /// # use lib::{Pos, Direction};
     /// let pos = Pos { x: 1, y: 2};
@@ -83,6 +88,7 @@ impl Pos {
     /// Seen the point as a vector from (0, 0), this function returns
     /// the vector turned 90° counter-clockwise.
     ///
+    /// # Example
     /// ```
     /// # use lib::{Pos, Direction};
     /// let pos = Pos { x: 1, y: 2};
