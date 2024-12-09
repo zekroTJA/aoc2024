@@ -14,5 +14,4 @@ Cargo.lock
 *.pdb
 .env
 
-# Haven't solved day 16 yet, so don't commit the attempt yet 
-day-16/
+*input.txt
