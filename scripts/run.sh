@@ -16,6 +16,11 @@ function run_day {
         return
     fi
     
+    if ! [ -f "$1/input.txt" ]; then
+        echo "Getting input ..."
+        bash "$(dirname "$0")/get-input.sh" "${1##*-}"
+    fi
+
     # shellcheck disable=SC2086
     cargo build $RELEASE_FLAG -p "$1"
 
